@@ -56,7 +56,7 @@ $(document).ready(function() {
       }
     });
   }
-  
+  //call to get the forcast
   function getForecast(searchValue) {
     $.ajax({
       type: "GET",
@@ -77,13 +77,13 @@ $(document).ready(function() {
 
             var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
 
-            var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
+            var imgage = $("<img>").attr("src", "http://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png");
 
-            var p1 = $("<p>").addClass("card-text").text("Temp: " + data.list[i].main.temp_max + " °F");
-            var p2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
+            var para1 = $("<p>").addClass("card-text").text("Temp: " + data.list[i].main.temp_max + " °F");
+            var para2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
 
             // merge together and put on page
-            col.append(card.append(body.append(title, img, p1, p2)));
+            col.append(card.append(body.append(title, imgage, para1, para2)));
             $("#forecast .row").append(col);
           }
         }
