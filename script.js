@@ -1,3 +1,4 @@
+// Start of javascript being read
 $(document).ready(function() {
   $("#search-button").on("click", function() {
     var searchValue = $("#search-value").val();
@@ -7,16 +8,16 @@ $(document).ready(function() {
 
     searchWeather(searchValue);
   });
-
+//search weather click
   $(".history").on("click", "li", function() {
     searchWeather($(this).text());
   });
-
+//adding list item 
   function makeRow(text) {
     var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
     $(".history").append(li);
   }
-
+//api call 
   function searchWeather(searchValue) {
     $.ajax({
       type: "GET",
@@ -30,7 +31,7 @@ $(document).ready(function() {
     
           makeRow(searchValue);
         }
-        console.log(data)
+        
         // clear any old content
         $("#today").empty();
 
