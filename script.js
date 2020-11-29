@@ -90,7 +90,7 @@ $(document).ready(function() {
       }
     });
   }
-
+// call to bring in uv index
   function getUVIndex(lat, lon) {
     $.ajax({
       type: "GET",
