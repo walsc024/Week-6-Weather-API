@@ -98,14 +98,14 @@ $(document).ready(function() {
       dataType: "json",
       success: function(data) {
         var uv = $("<p>").text("UV Index: ");
-        var btn = $("<span>").addClass("btn btn-sm").text(data.value);
+        var buttn = $("<span>").addClass("btn btn-sm").text(data.value);
         
         // change color depending on uv value
         if (data.value < 3) {
-          btn.addClass("btn-success");
+          buttn.addClass("btn-success");
         }
         else if (data.value < 7) {
-          btn.addClass("btn-warning");
+          buttn.addClass("btn-warning");
         }
         else {
           btn.addClass("btn-danger");
