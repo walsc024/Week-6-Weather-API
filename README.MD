@@ -46,3 +46,8 @@ Then i added vales and classes for html elements and also appended them to the c
 TO get the forecast i again used an ajax api call and loopeed over the forecast every three hours, this was then appended to the html
 
 The third and final ajax call method was used to create the UV index which was given a class and a loop to go through the determine the colour of the uv index button.
+
+
+## Full site here:
+
+https://walsc024.github.io/Week-6-Weather-API/
